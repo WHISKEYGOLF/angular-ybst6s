@@ -1,7 +1,25 @@
+p,
+div,
+h3,
+section {
+  padding: 0;
+  margin: 0;
+}
 
+h2 {
+  font-size: 28px;
+}
 
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
+h3 {
+  margin: 0 0 4px;
+}
+
+p {
+  margin: 10px 0 30px 0;
+}
+
+div {
+  padding: 8px;
+  margin: 0 0 40px;
+  background-color: rgb(243, 245, 244);
+}
