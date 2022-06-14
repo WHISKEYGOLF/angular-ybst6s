@@ -7,4 +7,6 @@
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
   <button type="button" (click)="share()">Share</button>
+
+  <app-product-alerts [product]="product" (notify)="OnNotify()"></app-product-alerts>
 </div>
