@@ -1,7 +1,30 @@
 <section>
-  <h3>Cart</h3>
-   <div class="cart-item" *ngFor="let item of items">
-    <span> {{ item.name }} </span>
-    <span> {{item.price}} </span>
+  <div class="row">
+    <div class="col"></div>
+    <h3>Cart</h3>
+    <p>
+      <a routerLink="/shipping">Shipping Prices</a>
+    </p>
+    <div class="cart-item" *ngFor="let item of items">
+      <span> {{ item.name }} </span>
+      <span> {{ item.price }} </span>
+    </div>
   </div>
+
+  <span
+    ><button class="button" *ngIf="items" type="button" (click)="emptyCart()">
+      Empty Cart
+    </button></span
+  >
+  <span
+    ><button
+      class="button"
+      style="background-color: green; margin-left: 10px; margin-top: 15px;"
+      *ngIf="items"
+      type="button"
+      (click)="purhcase()"
+    >
+      Purchase
+    </button></span
+  >
 </section>

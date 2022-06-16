@@ -1,8 +1,8 @@
 .row {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-top: 40px;
 }
 
@@ -20,4 +20,17 @@
 
 .mb-2 {
   margin-bottom: 20px;
+}
+
+.button,
+button {
+  display: inline-block;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
 }
