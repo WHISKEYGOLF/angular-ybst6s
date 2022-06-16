@@ -1,8 +1,12 @@
-<p>product-details works!</p>
-
-<pre *ngIf="product">
-  {{ product?.id }} 
-  {{ product?.name }}
-  {{ product?.price | currency }}
-  {{ product?.description }}
-</pre>
+<div class="row">
+  <div class="col">
+    <div *ngIf="product">
+      <h3 class="mb-0">{{ product?.name }}</h3>
+      <h4 class="mb-1">{{ product?.price | currency }}</h4>
+      <p>{{ product?.description }}</p>
+      <div>
+        <button type="button" (click)="addToCart(product)">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
