@@ -11,20 +11,42 @@
     </div>
   </div>
 
-  <span
-    ><button class="button" *ngIf="items" type="button" (click)="emptyCart()">
-      Empty Cart
-    </button></span
-  >
-  <span
-    ><button
-      class="button"
-      style="background-color: green; margin-left: 10px; margin-top: 15px;"
-      *ngIf="items"
-      type="button"
-      (click)="purhcase()"
-    >
-      Purchase
-    </button></span
-  >
+  <hr style="margin: 30px 0 30px; width: 100%;" />
+
+  <div>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input id="address" type="text" formControlName="address" />
+      </div>
+
+      <div class="form-group">
+        <span
+          ><button
+            class="button"
+            *ngIf="items"
+            type="button"
+            (click)="emptyCart()"
+          >
+            Empty Cart
+          </button></span
+        >
+        <span
+          ><button
+            class="button"
+            style="background-color: green; margin-left: 10px; margin-top: 15px;"
+            *ngIf="items"
+            type="submit"
+          >
+            Purchase
+          </button></span
+        >
+      </div>
+    </form>
+  </div>
 </section>
